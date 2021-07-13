@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Inventory</title>
+</head>
+
+<body>
+    <h1>Inventory</h1>
+    <ul>
+        {% for item in items %}
+        <li>Name: {{item.name}}</li>
+        <li>Availability: {{item.availability}}</li>
+        <li>Supplier: {{item.supplier_name}}</li>
+        <br />
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
