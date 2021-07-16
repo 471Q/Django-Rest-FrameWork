@@ -1,7 +1,7 @@
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
-from inventory.models import Inventory, Supplier
+from inventory_api.models import Inventory, Supplier
 from django.contrib.auth.models import User
 
 

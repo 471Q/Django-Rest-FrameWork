@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import InventoryList, InventoryDetail, supplierList, supplierDetail
+from .views import InventoryList, InventoryDetail
 
 app_name = 'inventory_api'
 

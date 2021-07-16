@@ -1,0 +1,3 @@
+To run this project activate the virtual environment first. 
+-if you are using cmd, then cd into venv/Scripts/activate  (this will initiate the virual environment)
+-if you are using visual-studio-code terminal, then cd into venv/Scripts, once in this directory type ./activate (this will initiate the virual environment)

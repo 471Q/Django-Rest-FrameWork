@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from inventory.models import Inventory, Supplier
+from inventory_api.models import Inventory, Supplier
 
 
 class InventorySerializer(serializers.ModelSerializer):
@@ -16,7 +16,7 @@ class CustomInventorySerializer(serializers.ModelSerializer):
         model = Inventory
 
 
-class supplierSerializer(serializers.ModelSerializer):
+class SupplierSerializer(serializers.ModelSerializer):
      supplier = serializers.RelatedField(read_only=True)
      class Meta:
         model = Supplier

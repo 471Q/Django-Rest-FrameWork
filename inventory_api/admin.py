@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from . import models
+
+#superuser access
+admin.site.register(models.Supplier)
+admin.site.register(models.Inventory)
