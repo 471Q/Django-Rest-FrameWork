@@ -14,7 +14,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates/inventory")
 DATABASE_DIR = os.path.join(BASE_DIR, "db.sqlite3")
 
 # Quick-start development settings - unsuitable for production
