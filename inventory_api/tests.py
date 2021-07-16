@@ -9,25 +9,25 @@ class PostTests(APITestCase):
 
     def testViewAllItems(self):
         """
-        test all objects.
+        test front-end endpoint.
         """
-        url = reverse('inventory_api:list')
+        url = 'http://127.0.0.1:8000/inventory'
         response = self.client.get(url, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def testSingleItem(self):
         """
-        test individual object.
+        test api endpoint.
         """
-        url = reverse('inventory_api:detail')
+        url = 'http://127.0.0.1:8000/api/inventory/'
         response = self.client.get(url, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def testFilterQuery(self):
 
         """
-        test filtered object.
+        test front-end endpoint with query.
         """
-        url = reverse('inventory_api:detail')
-        response = self.client.get(url+'?name=iot', format='json')
+        url = "http://127.0.0.1:8000/inventory/tablets"
+        response = self.client.get(url, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)

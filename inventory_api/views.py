@@ -11,9 +11,12 @@ class InventoryViewSet(viewsets.ModelViewSet):
         'retrieve': InventorySerializer,
     }
 
-    def get_serializer_class(self):
-        return self.serializer_classes.get(self.action)
+    default_serializer_class  = CustomInventorySerializer
 
+    def get_serializer_class(self):
+        return self.serializer_classes.get(self.action, self.default_serializer_class)
+
+   
     def get_object(self, queryset=None, **kwargs):
         item = self.kwargs.get('pk')
         return get_object_or_404(Inventory, name=item)
